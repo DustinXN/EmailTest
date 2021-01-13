@@ -1,3 +1,4 @@
+//A test file to push the message to RabbitMQ queue.
 const amqplib = require('amqplib/callback_api');
 
 // Create connection to AMQP server

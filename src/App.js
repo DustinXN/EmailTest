@@ -1,6 +1,4 @@
 //KOA connection
-
-
 const Koa = require('koa');
 const Router = require('koa-router');
 const Logger = require('koa-logger');

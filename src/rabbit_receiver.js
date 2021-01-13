@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Create connection to AMQP server
-amqplib.connect('amqp://:::5672', (err0, connection) => {
+amqplib.connect('amqp://3.104.75.205:5672', (err0, connection) => {
     if (err0) {
         throw err0;
     }
@@ -34,7 +34,8 @@ amqplib.connect('amqp://:::5672', (err0, connection) => {
 
         channel.consume(queue, (msg) => {
             //Convert data into JSON format
-            const jsonFileContent = JSON.parse(msg.content)
+            console.log(JSON.parse(msg.content));
+            const jsonFileContent = JSON.parse(msg.content);
             
             const emailContent = emailContext(jsonFileContent);
 
